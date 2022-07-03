@@ -8,6 +8,16 @@ namespace Data.Entities;
 public class Part : DictionaryBase
 {
     /// <summary>
+    /// Ссылка на тип запчасти
+    /// </summary>
+    public long PartTypeId { get; set; }
+    
+    /// <summary>
+    /// Тип запчасти
+    /// </summary>
+    public PartType Type { get; set; }
+
+    /// <summary>
     /// Модель
     /// </summary>
     public string Model { get; set; }
