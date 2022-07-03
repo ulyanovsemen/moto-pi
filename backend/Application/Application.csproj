@@ -6,4 +6,12 @@
         <Nullable>disable</Nullable>
     </PropertyGroup>
 
+    <ItemGroup>
+      <ProjectReference Include="..\Data\Data.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <PackageReference Include="AutoMapper" Version="11.0.1" />
+    </ItemGroup>
+
 </Project>
