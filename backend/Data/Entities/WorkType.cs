@@ -3,9 +3,9 @@
 namespace Data.Entities;
 
 /// <summary>
-/// Тип запчасти
+/// Вид работ
 /// </summary>
-public class PartType : DictionaryEntityBase
+public class WorkType : DictionaryEntityBase
 {
     
 }

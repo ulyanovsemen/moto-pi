@@ -26,6 +26,16 @@ public class DataContext : DbContext
     /// </summary>
     public DbSet<Part> Parts { get; set; }
 
+    /// <summary>
+    /// Справочник видов работ
+    /// </summary>
+    public DbSet<WorkType> WorkTypes { get; set; }
+
+    /// <summary>
+    /// Справочник работ
+    /// </summary>
+    public DbSet<Work> Works { get; set; }
+    
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         modelBuilder.ApplyConfigurationsFromAssembly(typeof(DataContext).Assembly);

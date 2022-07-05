@@ -1,11 +1,10 @@
-﻿using Data.Configuration.Extensions;
-using Data.Entities;
+﻿using Data.Entities;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace Data.Seeding;
 
-public class PartSeeding : IEntityTypeConfiguration<Part>
+public class PartsSeeding : IEntityTypeConfiguration<Part>
 {
     public void Configure(EntityTypeBuilder<Part> builder)
     {

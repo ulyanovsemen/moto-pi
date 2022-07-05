@@ -20,12 +20,12 @@ public static class ConfigurationExtensions
     }
 
     /// <summary>
-    /// Сконфигурировать как <see cref="DictionaryBase"/>
+    /// Сконфигурировать как <see cref="DictionaryEntityBase"/>
     /// </summary>
     /// <param name="builder"></param>
     /// <typeparam name="TEntity"></typeparam>
     public static void ConfigureAsDictionaryBase<TEntity>(this EntityTypeBuilder<TEntity> builder)
-        where TEntity : DictionaryBase
+        where TEntity : DictionaryEntityBase
     {
         builder.ConfigureAsEntityBase();
         builder.Property(e => e.Name).IsRequired().HasComment("Наименование");

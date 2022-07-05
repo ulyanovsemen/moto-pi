@@ -5,7 +5,7 @@ namespace Data.Entities;
 /// <summary>
 /// Запчасть
 /// </summary>
-public class Part : DictionaryBase
+public class Part : DictionaryEntityBase
 {
     /// <summary>
     /// Ссылка на тип запчасти

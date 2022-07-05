@@ -3,7 +3,7 @@
 /// <summary>
 /// Базовый класс справочной записи
 /// </summary>
-public class DictionaryBase : EntityBase
+public class DictionaryEntityBase : EntityBase
 {
     /// <summary>
     /// Наименование

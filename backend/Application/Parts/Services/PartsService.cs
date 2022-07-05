@@ -1,4 +1,5 @@
-﻿using Application.Parts.Dto;
+﻿using Application.Common.Base;
+using Application.Parts.Dto;
 using AutoMapper;
 using AutoMapper.QueryableExtensions;
 using Data;
@@ -6,25 +7,20 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Application.Parts.Services;
 
-/// <inheritdoc/>
-public class PartsService : IPartsService
+/// <inheritdoc cref="IPartsService"/>
+public class PartsService : ServiceBase, IPartsService
 {
-    private readonly DataContext _context;
-    private readonly IMapper _mapper;
-
     /// <inheritdoc cref="IPartsService"/>
-    public PartsService(DataContext context, IMapper mapper)
+    public PartsService(DataContext context, IMapper mapper) : base (context, mapper)
     {
-        _context = context;
-        _mapper = mapper;
     }
     
     /// <inheritdoc/>
     public async Task<ICollection<PartDto>> GetParts()
     {
-        return await _context.Parts
+        return await Context.Parts
             .OrderBy(p => p.Name)
-            .ProjectTo<PartDto>(_mapper.ConfigurationProvider)
+            .ProjectTo<PartDto>(Mapper.ConfigurationProvider)
             .ToListAsync();
     }
 }

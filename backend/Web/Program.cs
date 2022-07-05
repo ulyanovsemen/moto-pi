@@ -1,6 +1,7 @@
 using System.Reflection;
 using Application.Parts.Mapping;
 using Application.Parts.Services;
+using Application.Works.Services;
 using Data;
 using Microsoft.EntityFrameworkCore;
 
@@ -39,6 +40,7 @@ services.AddAutoMapper(
 
 // Adding Application Services
 services.AddTransient<IPartsService, PartsService>();
+services.AddTransient<IWorksService, WorksService>();
 
 var app = builder.Build();
 
