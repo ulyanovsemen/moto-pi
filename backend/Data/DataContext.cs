@@ -36,6 +36,11 @@ public class DataContext : DbContext
     /// </summary>
     public DbSet<Work> Works { get; set; }
     
+    /// <summary>
+    /// Справочник сотрудников
+    /// </summary>
+    public DbSet<Employee> Employees { get; set; }
+
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         modelBuilder.ApplyConfigurationsFromAssembly(typeof(DataContext).Assembly);
