@@ -4,6 +4,7 @@ using Application.Parts.Services;
 using Application.Works.Services;
 using Data;
 using Microsoft.EntityFrameworkCore;
+using Web.Middlewares;
 
 var builder = WebApplication.CreateBuilder(args);
 var services = builder.Services;
@@ -50,6 +51,7 @@ if (app.Environment.IsDevelopment())
 }
 
 app
+    .UseExceptionsHandler()
     .UseSwagger()
     .UseSwaggerUI()
     .UseAuthorization();
