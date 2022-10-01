@@ -3,8 +3,9 @@
 namespace Data.Entities;
 
 /// <summary>
-/// Сотрудник
+/// Заказчик
 /// </summary>
-public class Employee : PersonBase
+public class Customer : PersonBase
 {
+    
 }

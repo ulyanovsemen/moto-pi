@@ -18,10 +18,15 @@ public class Part : DictionaryEntityBase
     public PartType Type { get; set; }
 
     /// <summary>
-    /// Модель
+    /// Идентификатор марки запчасти
     /// </summary>
-    public string Model { get; set; }
-
+    public long PartModelId { get; set; }
+    
+    /// <summary>
+    /// Марка запчасти
+    /// </summary>
+    public PartModel Model { get; set; }
+    
     /// <summary>
     /// Номер
     /// </summary>

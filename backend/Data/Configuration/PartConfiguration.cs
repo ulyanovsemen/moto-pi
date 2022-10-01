@@ -16,6 +16,13 @@ public class PartConfiguration : IEntityTypeConfiguration<Part>
         builder
             .HasOne(p => p.Type)
             .WithMany()
+            .HasForeignKey(p => p.PartTypeId)
+            .OnDelete(DeleteBehavior.Restrict);
+
+        builder
+            .HasOne(p => p.Model)
+            .WithMany()
+            .HasForeignKey(p => p.PartModelId)
             .OnDelete(DeleteBehavior.Restrict);
     }
 }
