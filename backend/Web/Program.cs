@@ -1,4 +1,5 @@
 using System.Reflection;
+using Application.Employees.Services;
 using Application.Parts.Mapping;
 using Application.Parts.Services;
 using Application.Works.Services;
@@ -40,8 +41,11 @@ services.AddAutoMapper(
 );
 
 // Adding Application Services
-services.AddTransient<IPartsService, PartsService>();
-services.AddTransient<IWorksService, WorksService>();
+services
+    .AddTransient<IPartsService, PartsService>()
+    .AddTransient<IWorksService, WorksService>()
+    .AddTransient<IEmployeesService, EmployeesService>()
+    ;
 
 var app = builder.Build();
 
