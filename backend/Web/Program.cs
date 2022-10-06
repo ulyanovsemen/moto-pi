@@ -1,5 +1,7 @@
 using System.Reflection;
+using Application.Common.Services;
 using Application.Employees.Services;
+using Application.Orders.Services;
 using Application.Parts.Mapping;
 using Application.Parts.Services;
 using Application.Works.Services;
@@ -45,6 +47,7 @@ services
     .AddTransient<IPartsService, PartsService>()
     .AddTransient<IWorksService, WorksService>()
     .AddTransient<IEmployeesService, EmployeesService>()
+    .AddTransient<ITimeService, TimeService>()
     ;
 
 var app = builder.Build();
