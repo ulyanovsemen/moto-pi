@@ -48,6 +48,7 @@ services
     .AddTransient<IWorksService, WorksService>()
     .AddTransient<IEmployeesService, EmployeesService>()
     .AddTransient<ITimeService, TimeService>()
+    .AddTransient<IOrdersService, OrdersService>()
     ;
 
 var app = builder.Build();

@@ -51,7 +51,7 @@ public class Order : EntityBase
     /// <summary>
     /// Статус заказа
     /// </summary>
-    public OrderStatus Status { get; set; }
+    public OrderStatus Status { get; set; } = OrderStatus.New;
 
     /// <summary>
     /// Дата изменения
